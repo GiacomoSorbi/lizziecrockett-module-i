@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dr Birch's Jam Engine</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+
+<body>
+  <span id="sitetitle">Dr Birch's Jam Engine</span>
+  <section id="guestGreeting"></section>
+  Carousel </br>
+  menu with clearance items</br>
+  AB's sign in
+  <footer>
+    <p>&copy; Dr Birch's Jam Engine
+      <script type="text/javascript">
+        document.write(new Date().getFullYear()); 
+      </script>
+    </p>
+  </footer>
+</body>
+<script>
+  let myDate = new Date();
+  let hrs = myDate.getHours();
+  let greet;
+  if (hrs < 12)
+    greet = 'Good morning';
+  else if (hrs >= 12 && hrs <= 17)
+    greet = 'Good afternoon';
+  else if (hrs >= 17 && hrs <= 24)
+    greet = 'Good evening';
+  document.getElementById('guestGreeting').innerHTML =
+    `${greet}, jam enthusiast.`;
+</script>
+
+</html>

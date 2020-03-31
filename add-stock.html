@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dr Birch's Jam Engine</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="topnav" id="myTopnav">
+        <span id="sitetitle">Dr Birch's Jam Engine</span>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="#">Pantry</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="#">Sign out</a>
+        <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    Add stock form </br>
+    product name (autocompletes from existing recipes)</br>
+    date of manufacture(DDMMYYYY)</br>
+    quantity</br>
+    add button</br>
+    back to dashboard</br>
+    <footer>
+        <p>&copy; Dr Birch's Jam Engine
+            <script type="text/javascript">
+                document.write(new Date().getFullYear()); 
+            </script>
+        </p>
+    </footer>
+</body>
+
+<script>
+    function expandMenu() {
+        let x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</html>
