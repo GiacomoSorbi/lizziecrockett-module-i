@@ -22,14 +22,17 @@ main {
 .showSlide {  
   display: none  
 }  
-  .showSlide img {  
+  
+.showSlide img {  
       width: 100%;  
   }  
+
 .carousel {  
   max-width: 1000px;  
   position: relative;  
   margin: auto;  
-}  
+}
+
 .left, .right {  
   cursor: pointer;  
   position: absolute;  
@@ -189,8 +192,8 @@ footer {
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 0;
     grid-row-gap: 0;
-    justify-items: stretch;
-    align-items: stretch;
+    justify-items: center;
+    align-items: center;
  }
 
 }
