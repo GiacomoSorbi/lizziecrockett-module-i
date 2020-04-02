@@ -6,16 +6,29 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Dr Birch's Jam Engine</title>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <header id="sitetitle">Dr Birch's Jam Engine</header>
   <main>
-    <section id="carousel">
-      <img src="img/jam1.jpg">
-      <img src="img/jam2.jpg">
-      <img src="img/jam3.jpg">
-      <img src="img/jam4.jpg">
+    <section class="carousel">
+      <div class="showSlide fade">  
+        <img src="img/jam1.jpg" />  
+            </div>  
+    <div class="showSlide fade">  
+        <img src="img/jam2.jpg"/>  
+        </div>  
+
+    <div class="showSlide fade">  
+        <img src="img/jam3.jpg"/>  
+          </div>  
+    <div class="showSlide fade">  
+        <img src="img/jam4.jpg"/>  
+         </div>  
+    <!-- Navigation arrows -->  
+    <a class="left" onclick="nextSlide(-1)">❮</a>  
+    <a class="right" onclick="nextSlide(1)">❯</a>  
     </section>
     <section id="guestGreeting"></section>
     <section id="menu">
@@ -34,6 +47,24 @@
     <p>&copy; Dr Birch's Jam Engine
       <script type="text/javascript">
         document.write(new Date().getFullYear()); 
+        let slide_index = 1;  
+        displaySlides(slide_index);  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+        function displaySlides(n) {  
+            let i;  
+            let slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
       </script>
     </p>
   </footer>
