@@ -13,7 +13,7 @@
 <body>
 
   <header class="topnav" id="myTopnav">
-    <span id="sitetitle">Dr Birch's Jam Engine</span>
+    <span class=sitetitle>Dr Birch's Jam Engine</span>
     <a href="./dashboard.html" class="active">Dashboard</a>
     <a href="#">Pantry</a>
     <a href="recipes.html">Recipes</a>
@@ -23,14 +23,14 @@
     </a>
   </header>
   <main>
-    <section id="anthonyGreeting"></section>
+    <section class=pagetitle id="anthonyGreeting"></section>
     <section id="possibleactions">
       <a href="add-stock.html"><img src="img/additem.png"></a>
       <a href="#"><img src="img/removeitem.png"></a>
       <a href="#"><img src="img/viewpantry.png"></a>
       <a href="recipes.html"><img src="img/viewrecipes.png"></a>
     </section>
-    <section id="signout"> SIGN OUT BUTTON</section>
+    <button class=actionbutton id="signout"> SIGN OUT BUTTON</button>
   </main>
   <footer>
     <p>&copy; Dr Birch's Jam Engine
@@ -44,24 +44,15 @@
 <script>
   let myDate = new Date();
   let hrs = myDate.getHours();
-  let greet;
+  let greetAnt;
   if (hrs < 12)
-    greet = 'Good morning';
+    greetAnt = 'Good morning';
   else if (hrs >= 12 && hrs <= 17)
-    greet = 'Good afternoon';
+    greetAnt = 'Good afternoon';
   else if (hrs >= 17 && hrs <= 24)
-    greet = 'Good evening';
+    greetAnt = 'Good evening';
   document.getElementById('anthonyGreeting').innerHTML =
-    `${greet}, Anthony. </br> What would you like to do?`;
-
-  function expandMenu() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+    `${greetAnt}, Anthony. </br> What would you like to do?`;
 </script>
 
 </html>

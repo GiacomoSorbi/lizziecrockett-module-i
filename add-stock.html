@@ -13,7 +13,7 @@
 <body>
 
     <header class="topnav" id="myTopnav">
-        <span id="sitetitle">Dr Birch's Jam Engine</span>
+        <span class="sitetitle">Dr Birch's Jam Engine</span>
         <a href="./dashboard.html">Dashboard</a>
         <a href="#">Pantry</a>
         <a href="recipes.html">Recipes</a>
@@ -23,16 +23,16 @@
         </a>
     </header>
     <main>
-       <section id="pagetitle">Add new items</section>
-        <section id="additems">
-            <form>
-                name<br>
-                date of production<br>
-                quantity<br>
-                add button
-            </form>
-        </section>
-       <section id="returntodash"> RETURN TO MY DASHBOARD</section>
+        <section class="pagetitle">Add new items</section>
+        <form id="additems">
+            <div id="productdetails">
+                item name </br>
+                date of manufacture</br>
+                quantity</br>
+            </div>
+            <button id="additem-button" type="submit" onclick=dummyFunction()>Add to pantry</button>
+        </form>
+        <button class="actionbutton" id="backtodash"> RETURN TO MY DASHBOARD</button>
     </main>
     <footer>
         <p>&copy; Dr Birch's Jam Engine
@@ -41,17 +41,8 @@
             </script>
         </p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
-<script>
-    function expandMenu() {
-        let x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
 
 </html>

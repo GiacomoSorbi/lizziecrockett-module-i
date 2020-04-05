@@ -13,7 +13,7 @@
 <body>
 
     <header class="topnav" id="myTopnav">
-        <span id="sitetitle">Dr Birch's Jam Engine</span>
+        <span class="sitetitle">Dr Birch's Jam Engine</span>
         <a href="./dashboard.html">Dashboard</a>
         <a href="#">Pantry</a>
         <a href="recipes.html" class="active">Recipes</a>
@@ -23,9 +23,16 @@
         </a>
     </header>
     <main>
-        <section id="pagetitle">Recipe Book</section>
-        <section id="recipebook">List of recipes </section>
-        <section id="returntodash"> RETURN TO MY DASHBOARD</section>
+        <section class="pagetitle">Recipe Book</section>
+        <section id="recipebook">
+            <div id="recipelist">List of recipes all here <br>
+                lots of recipes<br>
+                all the recipes<br>
+                they are all here<br>
+                </div>
+            <button id="addrecipe-button" onclick="dummyFunction()">Add a new recipe</button>
+        </section>
+        <button class="actionbutton" id="backtodash"> RETURN TO MY DASHBOARD</button>
     </main>
     <footer>
         <p>&copy; Dr Birch's Jam Engine
@@ -34,17 +41,8 @@
             </script>
         </p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
-<script>
-    function expandMenu() {
-        let x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
 
 </html>

@@ -2,19 +2,96 @@
 
 body {
   text-align: center;
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: center;
 }
 
 main {
   font-family: "Rhodium Libre";
  }
 
-#sitetitle, #pagetitle, #anthonyGreeting {
+.sitetitle {
     font-family: "Lobster Two";
     font-size: 1.5em;
-    padding: 0px 75px 0px 0px;
 }
 
-.carousel img {
+.pagetitle {
+  padding: 10px;
+  font-family: "Lobster Two";
+  }
+
+
+.imageslider {
+  padding: 10px;
+}
+
+#guestGreeting {
+    max-width: 50%;
+    padding: 10px;
+    text-align: right;
+}
+
+#menulist {
+max-width: 50%;
+margin: 10px;
+}
+
+
+#menulist, #recipelist {
+  overflow: scroll;
+}
+
+
+#possibleactions, #additems, #recipebook, #menu, #signin {
+  display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 10px;
+}
+
+
+#signin ::placeholder {
+  font-family: "Lobster Two";
+  text-align: center;
+}
+
+#signin-invite, #usernamepassword, #signin-button {
+  padding: 10px;
+}
+
+#signin-button {
+  align-self: flex-end;
+}
+
+.pagetitle {
+  padding: 10px
+}
+
+.actionbutton {
+  padding: 10px;
+}
+
+
+
+#possibleactions img {
+  height: 100px;
+  width: 100px;
+}
+
+#productdetails, #recipelist {
+  margin-right: 10px;
+}
+
+#additem-button, #addrecipe-button {
+  margin-left: 10px;
+}
+
+
+
+.imageslider img {
   width: 400px;
   height: 100px;
 }
@@ -27,7 +104,7 @@ main {
       width: 100%;  
   }  
 
-.carousel {  
+.imageslider {  
   max-width: 1000px;  
   position: relative;  
   margin: auto;  
@@ -77,7 +154,8 @@ main {
   -webkit-animation-duration: 1.5s;  
   animation-name: fade;  
   animation-duration: 1.5s;  
-}  
+} 
+
 @-webkit-keyframes fade {  
   from {  
       opacity: .4  
@@ -95,22 +173,6 @@ main {
       opacity: 1  
   }  
 }  
-
-#signin ::placeholder {
-  font-family: "Lobster Two";
-  text-align: center;
-}
-
-
-#possibleactions img {
-  height: 100px;
-  width: 100px;
-}
-
-
-menu {
-  overflow: scroll;
-}
 
 a:link {
   color: whitesmoke
@@ -164,9 +226,7 @@ footer {
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
 
-  #sitetitle {
-    padding: 25px;
-}
+
 
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
@@ -186,15 +246,50 @@ footer {
       text-align: center;
     }
 
+    .sitetitle {
+      font-family: "Lobster Two";
+      font-size: 1.25em;
+      padding: 25px;
+        }
+
+   
+
+
+#guestGreeting {
+  text-align: center;
+}
+
+#signin, #menu, #additems, #recipebook {
+   flex-direction: column;
+   justify-content: center;
+   margin: 10px;
+  }
+
+  #menu {
+    align-items: center;
+}
+
+  #signin-button {
+    align-self: center;
+  }
+
+
    #possibleactions {  
    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-    justify-items: center;
+    justify-items: center;  
     align-items: center;
  }
+
+ #productdetails, #recipelist {
+  margin-bottom: 10px;
+}
+
+#additem-button, #addrecipe-button {
+  margin-top: 10px;
+}
+
 
 }
   
