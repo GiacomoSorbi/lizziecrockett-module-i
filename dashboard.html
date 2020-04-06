@@ -12,15 +12,16 @@
 
 <body>
 
-  <header class="topnav" id="myTopnav">
-    <span class=sitetitle>Dr Birch's Jam Engine</span>
-    <a href="./dashboard.html" class="active">Dashboard</a>
-    <a href="#">Pantry</a>
-    <a href="recipes.html">Recipes</a>
-    <a href="#">Sign out</a>
-    <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
-      <i class="fa fa-bars"></i>
-    </a>
+  <header>
+    <div class="topnav" id="myTopnav">
+      <span class="sitetitle">Dr Birch's Jam Engine</span>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#">Pantry</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </header>
   <main>
     <section class=pagetitle id="anthonyGreeting"></section>
@@ -30,7 +31,9 @@
       <a href="#"><img src="img/viewpantry.png"></a>
       <a href="recipes.html"><img src="img/viewrecipes.png"></a>
     </section>
-    <button class=actionbutton id="signout"> SIGN OUT BUTTON</button>
+    <button class="actionbutton" id="signout" onclick=confirmSignOut()>
+      Sign out</button>
+
   </main>
   <footer>
     <p>&copy; Dr Birch's Jam Engine
@@ -53,6 +56,23 @@
     greetAnt = 'Good evening';
   document.getElementById('anthonyGreeting').innerHTML =
     `${greetAnt}, Anthony. </br> What would you like to do?`;
+
+    function confirmSignOut() {
+    let ask = window.confirm("Are you sure you want to sign out?");
+    if (ask) {
+        window.location.href = "index.html";
+    }
+}
+
+  function expandMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
 </script>
 
 </html>

@@ -11,28 +11,50 @@
 </head>
 
 <body>
-
-    <header class="topnav" id="myTopnav">
-        <span class="sitetitle">Dr Birch's Jam Engine</span>
-        <a href="./dashboard.html">Dashboard</a>
-        <a href="#">Pantry</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="#">Sign out</a>
-        <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <span class="sitetitle">Dr Birch's Jam Engine</span>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Pantry</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
         <section class="pagetitle">Add new items</section>
-        <form id="additems">
+        <form id="additems" method="get">
             <div id="productdetails">
-                item name </br>
-                date of manufacture</br>
-                quantity</br>
+                <div id="productname">
+                    <label for="productname">
+                        Product name</label> <input list="existing" name="existing">
+                    <datalist id="existing">
+                        <option value="Eliza Acton's Genuine Scotch Marmalade"> Eliza Acton's Genuine Scotch Marmalade
+                        </option>
+                        <option value="Orange &amp; Ginger Marmalade">Orange &amp; Ginger Marmalade </option>
+                        <option value="Thick Dark Marmalade">Thick Dark Marmalade</option>
+                        <option value="Quince Preserve">Quince Preserve</option>
+                        <option value="Raspberry Jam">Raspberry Jam</option>
+                        <option value="Strawberry Jam">Strawberry Jam</option>
+                        <option value="Peach Jam">Peach Jam </option>
+                        <option value="Redcurrant &amp; Blueberry Jam">Redcurrant &amp; Blueberry Jam</option>
+                    </datalist>
+                </div>
+                <div id="dateofproduction">
+                    <label for="dateofproduction">Date of production:</label>
+                    <input type="date" id="dateofproduction" name="dateofproduction">
+                </div>
+                <div id="quantity">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1">
+                </div>
             </div>
-            <button id="additem-button" type="submit" onclick=dummyFunction()>Add to pantry</button>
+            <button id="additem-button" class="actionbutton" type="submit" onclick=dummyFunction()>Add to
+                pantry</button>
         </form>
-        <button class="actionbutton" id="backtodash"> RETURN TO MY DASHBOARD</button>
+        <input type="button" class="actionbutton" id="backtodash" onclick="location.href='dashboard.html';"
+            value="Return to my dashboard" />
     </main>
     <footer>
         <p>&copy; Dr Birch's Jam Engine
@@ -43,6 +65,18 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
+<script>
+
+    function expandMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 
 
 </html>

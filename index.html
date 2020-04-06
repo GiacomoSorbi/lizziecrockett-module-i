@@ -10,28 +10,50 @@
 </head>
 
 <body>
-  <header class="sitetitle">Dr Birch's Jam Engine</header>
+  <header>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="img/jam1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/jam2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/jam3.jpg" style="width:100%">
+
+      </div>
+      <div id="frontpagetitle">Dr Birch's Jam Engine</div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+
+  </header>
   <main>
-    <section class="imageslider">
-      <div class="showSlide fade">
-        <img src="img/jam1.jpg" />
-      </div>
-      <div class="showSlide fade">
-        <img src="img/jam2.jpg" />
-      </div>
-      <div class="showSlide fade">
-        <img src="img/jam3.jpg" />
-      </div>
-      <div class="showSlide fade">
-        <img src="img/jam4.jpg" />
-      </div>
-      <!-- Navigation arrows -->
-      <a class="left" onclick="nextSlide(-1)">❮</a>
-      <a class="right" onclick="nextSlide(1)">❯</a>
-    </section>
     <section id="menu">
       <div id="guestGreeting"></div>
-      <div id="menulist">MENU AND CLEARANCE CONTENT HERE</div>
+      <div id="menulist">
+        <p>Eliza Acton's Genuine Scotch Marmalade</p>
+        <p>Orange &amp; Ginger Marmalade</p>
+        <p>Thick Dark Marmalade<span class="clearance">Clearance-last few jars!</span></p>
+        <p>Quince Preserve<span class="clearance">Clearance-last few jars!</span></p>
+        <p>Raspberry Jam</p>
+        <p>Strawberry Jam</p>
+        <p>Peach Jam<span class="clearance">Clearance-last few jars!</span></p>
+        <p>Redcurrant &amp; Blueberry Jam</p>
+        <p>Eliza Acton's Genuine Scotch Marmalade</p>
+        <p>Orange &amp; Ginger Marmalade</p>
+        <p>Thick Dark Marmalade<span class="clearance">Clearance-last few jars!</span></p>
+        <p>Quince Preserve<span class="clearance">Clearance-last few jars!</span></p>
+        <p>Raspberry Jam</p>
+        <p>Strawberry Jam</p>
+        <p>Peach Jam<span class="clearance">Clearance-last few jars!</span></p>
+        <p>Redcurrant &amp; Blueberry Jam</p>
+      </div>
     </section>
     <form id="signin">
       <div id="signin-invite">
@@ -39,18 +61,17 @@
       <div id="usernamepassword">
         <input type="text" id="username" name="username" placeholder="username"></br>
         <input type="password" id="pwd" name="pwd" placeholder="password"></div>
-      <div id="signin-button">
-        <button type="submit" onclick=dummyFunction()>Enter the pantry</button></div>
+      <button type="submit" id="signin-button" class="actionbutton" onclick=dummyFunction()>Enter the pantry</button>
     </form>
-  </main>
-  <footer>
-    <p>&copy; Dr Birch's Jam Engine
-      <script type="text/javascript">
-        document.write(new Date().getFullYear()); 
-      </script>
-    </p>
-  </footer>
-  <script src="script.js"></script>
+    </section>
+    <footer>
+      <p>&copy; Dr Birch's Jam Engine
+        <script type="text/javascript">
+          document.write(new Date().getFullYear()); 
+        </script>
+      </p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -12,27 +12,40 @@
 
 <body>
 
-    <header class="topnav" id="myTopnav">
-        <span class="sitetitle">Dr Birch's Jam Engine</span>
-        <a href="./dashboard.html">Dashboard</a>
-        <a href="#">Pantry</a>
-        <a href="recipes.html" class="active">Recipes</a>
-        <a href="#">Sign out</a>
-        <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <span class="sitetitle">Dr Birch's Jam Engine</span>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Pantry</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
         <section class="pagetitle">Recipe Book</section>
         <section id="recipebook">
-            <div id="recipelist">List of recipes all here <br>
-                lots of recipes<br>
-                all the recipes<br>
-                they are all here<br>
-                </div>
-            <button id="addrecipe-button" onclick="dummyFunction()">Add a new recipe</button>
+            <ul id="recipelist">
+                <li><a href="#">Eliza Acton's Genuine Scotch Marmalade</a></li>
+                <li><a href="#">Orange &amp; Ginger Marmalade</a></li>
+                <li><a href="#">Thick Dark Marmalade</a></li>
+                <li><a href="#">Quince Preserve</a></li>
+                <li><a href="#">Raspberry Jam</a></li>
+                <li><a href="#">Strawberry Jam</a></li>
+                <li><a href="#">Redcurrant &amp; Blueberry Jam</a></li>
+                <li><a href="#">Eliza Acton's Genuine Scotch Marmalade</a></li>
+                <li><a href="#">Orange &amp; Ginger Marmalade</a></li>
+                <li><a href="#">Thick Dark Marmalade</a></li>
+                <li><a href="#">Quince Preserve</a></li>
+                <li><a href="#">Raspberry Jam</a></li>
+                <li><a href="#">Strawberry Jam</a></li>
+                <li><a href="#">Redcurrant &amp; Blueberry Jam</a></li>
+            </ul>
+            <button id="addrecipe-button" class="actionbutton" onclick="dummyFunction()">Add a new recipe</button>
         </section>
-        <button class="actionbutton" id="backtodash"> RETURN TO MY DASHBOARD</button>
+        <input type="button" class="actionbutton" id="backtodash" onclick="location.href='dashboard.html';"
+            value="Return to my dashboard" />
     </main>
     <footer>
         <p>&copy; Dr Birch's Jam Engine
@@ -43,6 +56,16 @@
     </footer>
     <script src="script.js"></script>
 </body>
+<script>
 
+    function expandMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 
 </html>

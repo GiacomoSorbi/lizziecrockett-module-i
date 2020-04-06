@@ -5,32 +5,81 @@ body, html {
 }
 
 body {
+  padding: 10px 10px 10px 10px;
   text-align: center;
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
-  grid-row-gap: 10px;
-  justify-items: stretch;
-  align-items: center;
-}
+ }
+
 
 main {
   font-family: "Rhodium Libre";
+  font-size: 24px;
+}
+
+
+.actionbutton {
+  background-color: grey; /* Green */
+  border: none;
+  color: white;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: "Rhodium Libre";
+  padding: 5px 5px 5px 5px;
+}
+
+#addrecipe-button, #additem-button {
+background-color: blue;
+}
+
+#addrecipe-button {
+margin-top: 175px;
+margin-bottom: 175px;
+}
+
+#additem-button {
+  margin-top: 58px;
+margin-bottom: 58px;
+}
+
+#signin input {
+  font-family: "Lobster Two";
+  text-align: center;
+  height: 45px;
+  width: 250px;
+  font-size: 24px;
+  margin: 5px;
+}
+
+ .sitetitle {
+   margin-right: 200px;
  }
 
-.sitetitle {
-    font-family: "Lobster Two";
-    font-size: 1.5em;
+ .sitetitle, .pagetitle {
+     font-size: 36px;
+     font-family: "Lobster Two";
+    
 }
 
-.pagetitle {
-  padding: 10px;
-  font-family: "Lobster Two";
+#frontpagetitle {
+  font-size: 60px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  padding: 1.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+  footer, #frontpagetitle {
+    font-family: "Staatliches";
+    }
+
+  footer {
+    font-size: 20px;
   }
 
-
-.imageslider {
-  padding: 10px;
-}
 
 #guestGreeting {
     max-width: 50%;
@@ -40,12 +89,25 @@ main {
 
 #menulist {
 max-width: 50%;
-margin: 10px;
 }
+
+#menulist p {
+  margin: 0px 25px 0px 25px;
+} 
 
 
 #menulist, #recipelist {
   overflow: scroll;
+  border: 1px dashed grey;
+  height: 400px;
+  width: 600px;
+  text-align: left;
+}
+
+.clearance {
+  font-family: "Lobster Two";
+  color: orangered;
+  margin-left: 50px;
 }
 
 
@@ -53,31 +115,20 @@ margin: 10px;
   display: flex;
 flex-direction: row;
 justify-content: center;
-margin: 10px;
 }
 
 
-#signin ::placeholder {
+
+#signin-button ::placeholder {
   font-family: "Lobster Two";
   text-align: center;
 }
 
-#signin-invite, #usernamepassword, #signin-button {
-  padding: 10px;
-}
 
 #signin-button {
   align-self: flex-end;
+  margin-bottom: 5px;
 }
-
-.pagetitle {
-  padding: 10px
-}
-
-.actionbutton {
-  padding: 10px;
-}
-
 
 
 #possibleactions img {
@@ -85,99 +136,105 @@ margin: 10px;
   width: 100px;
 }
 
-#productdetails, #recipelist {
-  margin-right: 10px;
+#additems {
+  text-align: left;
 }
 
-#additem-button, #addrecipe-button {
-  margin-left: 10px;
+#productdetails input {
+  height: 40px;
+  width: 250px;
+  font-size: 24px;
+  margin: 5px;
+}
+
+#recipelist {
+  list-style-type: none;
 }
 
 
 
-.imageslider img {
-  width: 400px;
-  height: 100px;
+
+/*slideshow css*/
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-.showSlide {  
-  display: none  
-}  
-  
-.showSlide img {  
-      width: 100%;  
-  }  
-
-.imageslider {  
-  max-width: 1000px;  
-  position: relative;  
-  margin: auto;  
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.left, .right {  
-  cursor: pointer;  
-  position: absolute;  
-  top: 50%;  
-  width: auto;  
-  padding: 16px;  
-  margin-top: -22px;  
-  color: white;  
-  font-weight: bold;  
-  font-size: 18px;  
-  transition: 0.6s ease;  
-  border-radius: 0 3px 3px 0;  
-}  
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-.left {
+.prev {
   left: 0;  
   border-radius: 3px 0 0 3px;
 }
 
-.right {  
-  right: 0;  
-  border-radius: 3px 0 0 3px;  
-}  
-  .left:hover, .right:hover {  
-      background-color: rgba(115, 115, 115, 0.8);  
-  }  
-.content {  
-  color: #eff5d4;  
-  font-size: 30px;  
-  padding: 8px 12px;  
-  position: absolute;  
-  top: 10px;  
-  width: 100%;  
-  text-align: center;  
-}  
-.active {  
-  background-color: #717171;  
-}  
-/* Fading animation */  
-.fade {  
-  -webkit-animation-name: fade;  
-  -webkit-animation-duration: 1.5s;  
-  animation-name: fade;  
-  animation-duration: 1.5s;  
-} 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
 
-@-webkit-keyframes fade {  
-  from {  
-      opacity: .4  
-  }  
-  to {  
-      opacity: 1  
-  }  
-}  
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-@keyframes fade {  
-  from {  
-      opacity: .4  
-  }  
-  to {  
-      opacity: 1  
-  }  
-}  
+.dot:hover {
+  background-color: #717171;
+}
 
+#selectiondots {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*topnav css*/
 a:link {
   color: whitesmoke
     }
@@ -194,12 +251,6 @@ a:visited {
        overflow: hidden;
        font-family: "Rhodium Libre";
   }
-
-footer {
-  font-family: "Staatliches";
-  }
-
-
   
   /* Style the links inside the navigation bar */
   .topnav a {
@@ -209,7 +260,7 @@ footer {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 24px;
   }
   
   /* Change the color of links on hover */
@@ -227,37 +278,23 @@ footer {
     display: none;
   }
 
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
 
+@media screen and (max-width: 768px) {
 
+  #frontpagetitle {
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
- 
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: center;
-    }
-
-    .sitetitle {
-      font-family: "Lobster Two";
-      font-size: 1.25em;
-      padding: 25px;
-        }
-
-   
-
+  .sitetitle {
+    margin-right: 0px;
+  }
 
 #guestGreeting {
   text-align: center;
@@ -266,7 +303,6 @@ footer {
 #signin, #menu, #additems, #recipebook {
    flex-direction: column;
    justify-content: center;
-   margin: 10px;
   }
 
   #menu {
@@ -286,14 +322,37 @@ footer {
     align-items: center;
  }
 
- #productdetails, #recipelist {
-  margin-bottom: 10px;
-}
 
-#additem-button, #addrecipe-button {
-  margin-top: 10px;
-}
+/*responsive topnav css*/
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+  Show the link that contains should open and close the topnav (.icon) */
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .sitetitle {
+    font-family: "Lobster Two";
+    font-size: 1.25em;
+    padding: 25px;
+      }
+
+
+/*responsive slideshow css*/
+.prev, .next {font-size: 16px}
 
 }
   
