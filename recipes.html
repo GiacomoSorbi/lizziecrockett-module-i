@@ -15,9 +15,9 @@
     <header>
         <div class="topnav" id="myTopnav">
             <span class="sitetitle">Dr Birch's Jam Engine</span>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="#">Pantry</a>
-            <a href="recipes.html">Recipes</a>
+            <a href="dashboard.html" target="_blank">Dashboard</a>
+            <a href="#" target="_blank">Pantry</a>
+            <a href="recipes.html" target="_blank">Recipes</a>
             <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -27,20 +27,20 @@
         <section class="pagetitle">Recipe Book</section>
         <section id="recipebook">
             <ul id="recipelist">
-                <li><a href="#">Eliza Acton's Genuine Scotch Marmalade</a></li>
-                <li><a href="#">Orange &amp; Ginger Marmalade</a></li>
-                <li><a href="#">Thick Dark Marmalade</a></li>
-                <li><a href="#">Quince Preserve</a></li>
-                <li><a href="#">Raspberry Jam</a></li>
-                <li><a href="#">Strawberry Jam</a></li>
-                <li><a href="#">Redcurrant &amp; Blueberry Jam</a></li>
-                <li><a href="#">Eliza Acton's Genuine Scotch Marmalade</a></li>
-                <li><a href="#">Orange &amp; Ginger Marmalade</a></li>
-                <li><a href="#">Thick Dark Marmalade</a></li>
-                <li><a href="#">Quince Preserve</a></li>
-                <li><a href="#">Raspberry Jam</a></li>
-                <li><a href="#">Strawberry Jam</a></li>
-                <li><a href="#">Redcurrant &amp; Blueberry Jam</a></li>
+                <li><a href="#" target="_blank">Eliza Acton's Genuine Scotch Marmalade</a></li>
+                <li><a href="#" target="_blank">Orange &amp; Ginger Marmalade</a></li>
+                <li><a href="#" target="_blank">Thick Dark Marmalade</a></li>
+                <li><a href="#" target="_blank">Quince Preserve</a></li>
+                <li><a href="#" target="_blank">Raspberry Jam</a></li>
+                <li><a href="#" target="_blank">Strawberry Jam</a></li>
+                <li><a href="#" target="_blank">Redcurrant &amp; Blueberry Jam</a></li>
+                <li><a href="#" target="_blank">Eliza Acton's Genuine Scotch Marmalade</a></li>
+                <li><a href="#" target="_blank">Orange &amp; Ginger Marmalade</a></li>
+                <li><a href="#" target="_blank">Thick Dark Marmalade</a></li>
+                <li><a href="#" target="_blank">Quince Preserve</a></li>
+                <li><a href="#" target="_blank">Raspberry Jam</a></li>
+                <li><a href="#" target="_blank">Strawberry Jam</a></li>
+                <li><a href="#" target="_blank">Redcurrant &amp; Blueberry Jam</a></li>
             </ul>
             <button id="addrecipe-button" class="actionbutton" onclick="dummyFunction()">Add a new recipe</button>
         </section>
@@ -59,7 +59,7 @@
 <script>
 
     function expandMenu() {
-        var x = document.getElementById("myTopnav");
+        let x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {

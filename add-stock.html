@@ -14,9 +14,9 @@
     <header>
         <div class="topnav" id="myTopnav">
             <span class="sitetitle">Dr Birch's Jam Engine</span>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="#">Pantry</a>
-            <a href="recipes.html">Recipes</a>
+            <a href="dashboard.html" target="_blank">Dashboard</a>
+            <a href="#" target="_blank">Pantry</a>
+            <a href="recipes.html" target="_blank">Recipes</a>
             <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -28,7 +28,7 @@
             <div id="productdetails">
                 <div id="productname">
                     <label for="productname">
-                        Product name</label> <input list="existing" name="existing">
+                        Product name:</label> <input list="existing" name="existing">
                     <datalist id="existing">
                         <option value="Eliza Acton's Genuine Scotch Marmalade"> Eliza Acton's Genuine Scotch Marmalade
                         </option>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <button id="additem-button" class="actionbutton" type="submit" onclick=dummyFunction()>Add to
-                pantry</button>
+                the pantry</button>
         </form>
         <input type="button" class="actionbutton" id="backtodash" onclick="location.href='dashboard.html';"
             value="Return to my dashboard" />
@@ -69,7 +69,7 @@
 <script>
 
     function expandMenu() {
-        var x = document.getElementById("myTopnav");
+        let x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {
