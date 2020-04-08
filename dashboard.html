@@ -2,76 +2,70 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dr Birch's Jam Engine</title>
-  <link rel="stylesheet" href="stylesheet.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>Dr Birch's Jam Engine</title>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
 </head>
 
 <body>
-
-  <header>
-    <div class="topnav" id="myTopnav">
-        <span class="sitetitle">Dr Birch's Jam Engine</span>
-        <a href="dashboard.html" target="_blank">Dashboard</a>
-        <a href="#" target="_blank">Pantry</a>
-        <a href="recipes.html" target="_blank">Recipes</a>
-        <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-</header>
-  <main>
-    <section class=pagetitle id="anthonyGreeting"></section>
-    <section id="possibleactions">
-      <a href="add-stock.html"><img src="img/additem.png"></a>
-      <a href="#"><img src="img/removeitem.png"></a>
-      <a href="#"><img src="img/viewpantry.png"></a>
-      <a href="recipes.html"><img src="img/viewrecipes.png"></a>
-    </section>
-    <button class="actionbutton" id="signout" onclick=confirmSignOut()>
-      Sign out</button>
-
-  </main>
-  <footer>
-    <p>&copy; Dr Birch's Jam Engine
-      <script type="text/javascript">
-        document.write(new Date().getFullYear()); 
-      </script>
-    </p>
-  </footer>
+	<header>
+		<div class="topnav" id="myTopnav">
+			<span class="sitetitle">Dr Birch's Jam Engine</span> <a href="dashboard.html" target="_blank">Dashboard</a>
+			<a href="#" target="_blank">Pantry</a> <a href="recipes.html" target="_blank">Recipes</a> <a class="icon"
+				href="javascript:void(0);" onclick="expandMenu()"><i class="fa fa-bars"></i></a>
+		</div>
+	</header>
+	<main>
+		<section class="pagetitle" id="anthonyGreeting"></section>
+		<section id="possibleactions">
+			<a href="add-stock.html"><img src="img/additem.png"></a> <a href="#"><img src="img/removeitem.png"></a> <a
+				href="#"><img src="img/viewpantry.png"></a> <a href="recipes.html"><img src="img/viewrecipes.png"></a>
+		</section><button class="actionbutton" id="signout" onclick="confirmSignOut()">Sign out</button>
+	</main>
+	<footer>
+		<p>&copy; Dr Birch's Jam Engine
+			<script type="text/javascript">
+				document.write(new Date().getFullYear()); 
+			</script>
+		</p>
+	</footer>
 </body>
-
 <script>
-  let myDate = new Date();
-  let hrs = myDate.getHours();
-  let greetAnt;
-  if (hrs < 12)
-    greetAnt = 'Good morning';
-  else if (hrs >= 12 && hrs <= 17)
-    greetAnt = 'Good afternoon';
-  else if (hrs >= 17 && hrs <= 24)
-    greetAnt = 'Good evening';
-  document.getElementById('anthonyGreeting').innerHTML =
-    `${greetAnt}, Anthony. </br> What would you like to do?`;
+	
+	// time-dependent greeting code
+	// determines the current time and returns an appropriate greeting for the time of day
+	let myDate = new Date();
+	let hrs = myDate.getHours();
+	let greetAnt;
+	if (hrs < 12)
+		greetAnt = 'Good morning';
+	else if (hrs >= 12 && hrs <= 17)
+		greetAnt = 'Good afternoon';
+	else if (hrs >= 17 && hrs <= 24)
+		greetAnt = 'Good evening';
+	document.getElementById('anthonyGreeting').innerHTML =
+		`${greetAnt}, Anthony. </br> What would you like to do?`;
 
-  function confirmSignOut() {
-    let ask = window.confirm("Are you sure you want to sign out?");
-    if (ask) {
-      window.location.href = "index.html";
-    }
-  }
+	function confirmSignOut() {
+		let ask = window.confirm("Are you sure you want to sign out?");
+		if (ask) {
+			window.location.href = "index.html";
+		}
+	}
 
-  function expandMenu() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+	//nav menu code
+	// in default (mobile) setting, clicking the bars icon changes class of nav items to "topnav responsive" so that they display appropriately 
+	function expandMenu() {
+		let x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
 
 </script>
 

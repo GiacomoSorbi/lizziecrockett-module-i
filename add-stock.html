@@ -3,58 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
     <title>Dr Birch's Jam Engine</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div class="topnav" id="myTopnav">
-            <span class="sitetitle">Dr Birch's Jam Engine</span>
-            <a href="dashboard.html" target="_blank">Dashboard</a>
-            <a href="#" target="_blank">Pantry</a>
-            <a href="recipes.html" target="_blank">Recipes</a>
-            <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
+            <span class="sitetitle">Dr Birch's Jam Engine</span> <a href="dashboard.html" target="_blank">Dashboard</a>
+            <a href="#" target="_blank">Pantry</a> <a href="recipes.html" target="_blank">Recipes</a> <a class="icon"
+                href="javascript:void(0);" onclick="expandMenu()"><i class="fa fa-bars"></i></a>
         </div>
     </header>
     <main>
-        <section class="pagetitle">Add new items</section>
-        <form id="additems" method="get">
+        <section class="pagetitle">
+            Add new items
+        </section>
+        <form id="additems" method="get" name="additems">
             <div id="productdetails">
                 <div id="productname">
-                    <label for="productname">
-                        Product name:</label> <input list="existing" name="existing">
-                    <datalist id="existing">
-                        <option value="Eliza Acton's Genuine Scotch Marmalade"> Eliza Acton's Genuine Scotch Marmalade
+                    <label for="productname">Product name:</label> <input list="existing" name="existing"> <datalist
+                        id="existing">
+                        <option value="Eliza Acton's Genuine Scotch Marmalade">
+                            Eliza Acton's Genuine Scotch Marmalade
                         </option>
-                        <option value="Orange &amp; Ginger Marmalade">Orange &amp; Ginger Marmalade </option>
-                        <option value="Thick Dark Marmalade">Thick Dark Marmalade</option>
-                        <option value="Quince Preserve">Quince Preserve</option>
-                        <option value="Raspberry Jam">Raspberry Jam</option>
-                        <option value="Strawberry Jam">Strawberry Jam</option>
-                        <option value="Peach Jam">Peach Jam </option>
-                        <option value="Redcurrant &amp; Blueberry Jam">Redcurrant &amp; Blueberry Jam</option>
+                        <option value="Orange &amp; Ginger Marmalade">
+                            Orange &amp; Ginger Marmalade
+                        </option>
+                        <option value="Thick Dark Marmalade">
+                            Thick Dark Marmalade
+                        </option>
+                        <option value="Quince Preserve">
+                            Quince Preserve
+                        </option>
+                        <option value="Raspberry Jam">
+                            Raspberry Jam
+                        </option>
+                        <option value="Strawberry Jam">
+                            Strawberry Jam
+                        </option>
+                        <option value="Peach Jam">
+                            Peach Jam
+                        </option>
+                        <option value="Redcurrant &amp; Blueberry Jam">
+                            Redcurrant &amp; Blueberry Jam
+                        </option>
                     </datalist>
                 </div>
                 <div id="dateofproduction">
-                    <label for="dateofproduction">Date of production:</label>
-                    <input type="date" id="dateofproduction" name="dateofproduction">
+                    <label for="dateofproduction">Date of production:</label> <input id="dateofproduction"
+                        name="dateofproduction" type="date">
                 </div>
                 <div id="quantity">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1">
+                    <label for="quantity">Quantity:</label> <input id="quantity" min="1" name="quantity" type="number">
                 </div>
-            </div>
-            <button id="additem-button" class="actionbutton" type="submit" onclick=dummyFunction()>Add to
-                the pantry</button>
-        </form>
-        <input type="button" class="actionbutton" id="backtodash" onclick="location.href='dashboard.html';"
-            value="Return to my dashboard" />
+            </div><button class="actionbutton" id="additem-button" onclick="dummyFunction()" type="submit">Add to the
+                pantry</button>
+        </form><input class="actionbutton" id="backtodash" onclick="location.href='dashboard.html';" type="button"
+            value="Return to my dashboard">
     </main>
     <footer>
         <p>&copy; Dr Birch's Jam Engine
@@ -63,20 +72,20 @@
             </script>
         </p>
     </footer>
-    <script src="script.js"></script>
-</body>
-
-<script>
-
-    function expandMenu() {
-        let x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
+    <script>
+        
+        //nav menu code
+        // in default (mobile) setting, clicking the bars icon changes class of nav items to "topnav responsive" so that they display appropriately 
+        function expandMenu() {
+            let x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-    }
-</script>
 
+    </script>
+</body>
 
 </html>
