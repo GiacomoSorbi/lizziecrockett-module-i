@@ -71,7 +71,8 @@ footer,
 
 .clearance {
 	font-family: "Lobster Two";
-	color: orangered;
+	color: white;
+	background-color: #a50b5e;
 	margin-left: 50px;
 }
 

@@ -63,61 +63,66 @@
 			</script>
 		</p>
 	</footer>
+	<script>
+
+		// time-dependent greeting code
+		// determines the current time and returns an appropriate greeting for the time of day
+		let myDate = new Date();
+		let hrs = myDate.getHours();
+		let greet;
+
+		if (hrs < 12) greet = 'Good morning';
+		else if (hrs >= 12 && hrs <= 17) greet = 'Good afternoon';
+		else if (hrs >= 17 && hrs <= 24) greet = 'Good evening';
+		document.getElementById('guestGreeting').innerHTML = `${greet}, jam enthusiast. <br/> Here's what's currently in the pantry. <br/> Orders are first come first served, <br/> so pick up the phone!`;
+
+		//slideshow code
+		//establishes slide index to display in showSlides() as 1
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		//event on .prev and .next buttons
+		//adds the value passed as an argument (n) to slideIndex
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		//defines the current slide as the value passed as an argument (n) and runs showSlides with that argument as slideIndex
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		//see line 23 to see what parameter is passed
+		function showSlides(n) {
+			let i;
+			//grabs the slide images from the DOM
+			let slides = document.getElementsByClassName("mySlides");
+			//if the length of (n) is greater than the length of "slides", display slide 1
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			//if it's smaller than 1, display the length of "slides"
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			//runs a counter beginning at 0 and ending at the length of "slides", which styles the given index not to display 
+			//only displays one slide, the one at the given index -1 
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex - 1].style.display = "block";
+		}
+
+		//this script puts a footer on the page which automatically shows the current year
+		document.getElementById('footerdate').innerHTML = `&copy; Dr Birch's Jam Engine ${(new Date().getFullYear())}`;
+
+
+
+		//this function is for a button requiring username and password entry while there's nothing in the back end
+		dummyFunction()
+
+	</script>
 </body>
-<script>
 
-	// time-dependent greeting code
-	// determines the current time and returns an appropriate greeting for the time of day
-	let myDate = new Date();
-	let hrs = myDate.getHours();
-	let greet;
-
-	if (hrs < 12) greet = 'Good morning';
-	else if (hrs >= 12 && hrs <= 17) greet = 'Good afternoon';
-	else if (hrs >= 17 && hrs <= 24) greet = 'Good evening';
-	document.getElementById('guestGreeting').innerHTML = `${greet}, jam enthusiast. <br/> Here's what's currently in the pantry. <br/> Orders are first come first served, <br/> so pick up the phone!`;
-
-	//slideshow code
-	//establishes slide index to display in showSlides() as 1
-	let slideIndex = 1;
-	showSlides(slideIndex);
-
-	//event on .prev and .next buttons
-	//adds the value passed as an argument (n) to slideIndex
-	function plusSlides(n) {
-		showSlides(slideIndex += n);
-	}
-
-	//defines the current slide as the value passed as an argument (n) and runs showSlides with that argument as slideIndex
-	function currentSlide(n) {
-		showSlides(slideIndex = n);
-	}
-
-	//see line 23 to see what parameter is passed
-	function showSlides(n) {
-		let i;
-		//grabs the slide images from the DOM
-		let slides = document.getElementsByClassName("mySlides");
-		//if the length of (n) is greater than the length of "slides", display slide 1
-		if (n > slides.length) {
-			slideIndex = 1
-		}
-		//if it's smaller than 1, display the length of "slides"
-		if (n < 1) {
-			slideIndex = slides.length
-		}
-		//runs a counter beginning at 0 and ending at the length of "slides", which styles the given index not to display 
-		//only displays one slide, the one at the given index -1 
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		slides[slideIndex - 1].style.display = "block";
-	}
-
-
-	//this function is for a button requiring username and password entry while there's nothing in the back end
-	dummyFunction()
-
-</script>
 
 </html>

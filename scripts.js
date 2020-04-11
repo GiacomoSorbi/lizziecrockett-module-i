@@ -8,4 +8,4 @@ function expandMenu() {
     } else {
         x.className = "topnav";
     }
-}
+};

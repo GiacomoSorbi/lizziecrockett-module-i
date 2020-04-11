@@ -67,12 +67,14 @@
             value="Return to my dashboard">
     </main>
     <footer>
-        <p>&copy; Dr Birch's Jam Engine
-            <script type="text/javascript">
-                document.write(new Date().getFullYear()); 
-            </script>
+        <p id="footerdate">
         </p>
     </footer>
+    <script>
+        //this script puts a footer on the page which automatically shows the current year
+        document.getElementById('footerdate').innerHTML = `&copy; Dr Birch's Jam Engine ${(new Date().getFullYear())}`;
+    </script>
 </body>
+
 
 </html>
