@@ -9,3 +9,6 @@ function expandMenu() {
         x.className = "topnav";
     }
 };
+
+//this function is for a button requiring username and password entry while there's nothing in the back end
+dummyFunction()
