@@ -88,7 +88,7 @@ footer,
 	font-family: "Lobster Two";
 	text-align: center;
 	height: 30px;
-	border: 1px solid grey;
+	border: 1px solid black;
 	font-size: 24px;
 	margin: 5px;
 }
@@ -145,10 +145,9 @@ footer,
 	font-size: 20px;
 	text-align: center;
 	margin: 5px;
-	border: 1px solid grey;
+	border: 1px solid black;
 	font-family: "Rhodium Libre";
 	max-width: 60%;
-	color: grey;
 }
 
 #productname,
