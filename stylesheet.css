@@ -32,6 +32,7 @@ a:visited {
 
 footer {
 	font-size: 12px;
+	margin-top: 30px;
 }
 
 footer,
@@ -42,7 +43,7 @@ footer,
 /* page-specific settings */
 
 #frontpagetitle {
-	font-size: 24px;
+	font-size: 21px;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 1px;
