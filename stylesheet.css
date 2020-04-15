@@ -57,10 +57,12 @@ footer,
 	margin-top: 1em;
 }
 
+#menulist {
+	overflow: scroll;
+}
 #menulist,
 #recipelist {
 	align-self: center;
-	overflow: scroll;
 	border: 1px dotted grey;
 	text-align: left;
 	list-style-type: none;
@@ -290,8 +292,9 @@ footer,
 
 	body {
 		font-size: 20px;
-  }
-  
+	}
+
+
 	.actionbutton {
 		height: 35px;
 		font-size: 18px;
@@ -326,7 +329,9 @@ footer,
   
 	#menulist {
 		margin-left: 12.5px;
-  }
+		max-height: 300px;
+	}
+  
   
 	#signin {
 		flex-direction: row;
