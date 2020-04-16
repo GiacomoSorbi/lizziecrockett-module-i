@@ -64,8 +64,8 @@
 
 		// time-dependent greeting code
 		// determines the current time and returns an appropriate greeting for the time of day
-		let myDate = new Date();
-		let hrs = myDate.getHours();
+		const myDate = new Date();
+		const hrs = myDate.getHours();
 		let greet;
 
 		if (hrs < 12) greet = 'Good morning';
@@ -93,7 +93,7 @@
 		function showSlides(n) {
 			let i;
 			//grabs the slide images from the DOM
-			let slides = document.getElementsByClassName("mySlides");
+			const slides = document.getElementsByClassName("mySlides");
 			//if the length of (n) is greater than the length of "slides", display slide 1
 			if (n > slides.length) {
 				slideIndex = 1
